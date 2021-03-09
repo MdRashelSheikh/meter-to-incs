@@ -18,6 +18,11 @@
         <button onclick="myFunction()">result</button>
         
     </div>
+    <div class="bg1">
+        <h1>this is hotel cost function</h1>
+        <p id="demo" onclick="myFunction()">this is result</p>
+
+    </div>
 
     <script>
         function myFunction(){
@@ -25,6 +30,33 @@
             var inches=meter*39.3700787;
             document.getElementById('inches').value=inches;
         }
+
+        // hotel cost//
+        
+        function hotelCost(day){
+            var cost = 0;
+            if(day<=10){
+                cost = day*100;
+            }
+            else if(day<=20){
+                var firstPart= 10*100;
+                var remaing =day-10;
+                var secondPart=remaing*80;
+                var cost = firstPart+secondPart;
+            }
+            else{
+                var firstPart=10*100;
+                var secondPart=10*8;
+                remaing=day-20;
+                var thirdPart=remaing*50;
+                var cost=firstPart+secondPart+thirdPart;
+               
+            }
+            return cost;
+        }
+        var result=hotelCost(11)
+        document.getElementById('demo').innerHTML=result;
+        
 
 
     </script>

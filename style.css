@@ -1,0 +1,14 @@
+.bg{
+    background: rgb(118, 133, 123);
+    width: 600px;
+    height:400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+    
+}
+input{
+    outline:none
+}
